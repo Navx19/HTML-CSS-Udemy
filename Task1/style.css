@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f0f0f0;
+}
+
+.flag{
+    width:500px;
+    aspect-ratio:10/6;
+    background: green;
+    position:relative;
+}
+
+.circle{
+    width:180px;
+    height:180px;
+    background: red;
+    border-radius:50%;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+}
