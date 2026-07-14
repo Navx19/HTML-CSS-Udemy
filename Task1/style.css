@@ -9,25 +9,25 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#f0f0f0;
+    background: white;
 }
 
 .flag{
     width:500px;
-    aspect-ratio:10/6;
+    aspect-ratio:10/6; /
     background: green;
     position:relative;
 }
 
 .circle{
     width:180px;
-    height:180px;
+    height:180px; 
     background: red;
-    border-radius:50%;
+    border-radius:50%; 
 
     position:absolute;
     top:50%;
     left:50%;
 
-    transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%); /* translate the circle to the center of the flag */
 }
