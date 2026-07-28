@@ -10,7 +10,7 @@
   --primary-color: #fc5d66;
   --secondary-color: #ffc05a;
   --light-color: #f9fafb;
-  --dark-color: #272d35;
+  --dark-color: #71332c;
 }
 
 html,
@@ -32,7 +32,6 @@ img {
   max-width: 100%;
 }
 
-/* Utility Classes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -162,7 +161,6 @@ img {
   font-size: 1.5rem;
 }
 
-/* Mobile Menu */
 .mobile-menu {
   display: none;
 }
@@ -200,7 +198,7 @@ img {
 
 /* Hero */
 .hero {
-  background: #000 url('../images/header-background.jpg') center center/cover
+  background: #6b2f2f url('../images/header-background.jpg') center center/cover
     no-repeat;
   padding: 11.5rem 2rem 8rem;
   color: #fff;
@@ -414,7 +412,7 @@ img {
 
 /* Stats */
 .stats {
-  background: #000 url('../images/stats-background.jpg') center center/cover
+  background: #6b2f2f url('../images/stats-background.jpg') center center/cover
     no-repeat;
   color: #fff;
 }
@@ -537,7 +535,7 @@ img {
 .footer {
   background: var(--dark-color);
   color: #fff;
-  border-top: 1px solid #384653;
+  border-top: 1px solid #49221b;
   padding: 0.5rem 2rem;
 }
 
@@ -568,7 +566,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Contact Form */
 .contact-form p {
   margin-bottom: 3rem;
 }
