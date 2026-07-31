@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    /* Prevents horizontal scroll when mobile menu is active */
+    overflow-x: hidden; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px ;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 100;
+}
+
+.logo h2 {
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: black ;
+}
+
+.logo-icon {
+    color: #B88E2F ;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #B88E2F;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-icons span {
+    transition: transform 0.2s ease;
+}
+
+/* MOBILE MENU TOGGLE (HIDDEN ON DESKTOP) */
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px ;
+    }
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-container {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        gap: 30px;
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.05);
+        transition: left 0.3s ease;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-checkbox:checked ~ .nav-container {
+        left: 0;
+    }
+}
