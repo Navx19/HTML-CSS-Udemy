@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniro eCommerce</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniro eCommerce</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
+  <!-- Header -->
+  <header class="header">
+    <div class="container container-lg">
+      <div class="header-flex">
+        
         <div class="logo">
-            <h2><span class="logo-icon">M</span> Furniro</h2>
+          <a href="#">
+            <span class="logo-icon">M</span> Furniro
+          </a>
         </div>
         
-        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <!-- Main Menu -->
+        <nav class="main-menu">
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </nav>
 
-        <div class="nav-container">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-icons">
-                <span>👤</span>
-                <span>🔍</span>
-                <span>🤍</span>
-                <span>🛒</span>
-            </div>
+        <!-- Header Icons -->
+        <div class="header-icons">
+          <!-- Using standard text/emojis as placeholders for SVG icons -->
+          <a href="#">👤</a>
+          <a href="#">🔍</a>
+          <a href="#">🤍</a>
+          <a href="#">🛒</a>
         </div>
-    </header>
+
+      </div>
+    </div>
+  </header>
 
 </body>
 </html>
