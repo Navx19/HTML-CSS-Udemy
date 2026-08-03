@@ -46,7 +46,7 @@ img {
 }
 
 .btn.bg-primary {
-  padding: 1.2rem 4rem;
+  padding: 0.8rem 2rem;
   font-weight: 600;
   border: none;
   color: white;
@@ -54,7 +54,7 @@ img {
 }
 
 .btn.bg-primary:hover {
-  background: rgb(81, 66, 14) ;
+  background: rgb(81, 66, 14);
   color: white;
 }
 
@@ -77,9 +77,10 @@ img {
   max-width: var(--container-narrow);
 }
 
+/* --- Header Section --- */
 .header {
   margin: 1.5rem auto;
-  padding: 0.5rem 0;
+  padding: 0 1.5rem;
 }
 
 .header .header-flex {
@@ -102,7 +103,7 @@ img {
 
 .header .main-menu {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 .header .main-menu a {
@@ -116,7 +117,7 @@ img {
 
 .header-icons {
   display: flex;
-  gap: 8px;
+  gap: 15px;
 }
 
 .header-icons a {
@@ -135,11 +136,12 @@ img {
   height: 700px;
   display: flex;
   align-items: center;
+  padding: 0 1.5rem;
 }
 
 .hero-container {
   display: flex;
-  justify-content: flex-end; /* Pushes the content box to the right */
+  justify-content: flex-end; 
   width: 100%;
 }
 
@@ -148,6 +150,7 @@ img {
   padding: 4rem 3.5rem;
   border-radius: 10px;
 }
+
 .hero-content .subtitle {
   display: block;
   font-weight: 600;
@@ -191,6 +194,8 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  max-width: var(--container-wide);
+  margin: 0 auto;
 }
 
 .range-item {
@@ -211,8 +216,11 @@ img {
   color: var(--dark-color);
 }
 
+/* --- Our Products Section --- */
 .our-products {
   padding: 3rem 1.5rem 5rem;
+  max-width: var(--container-wide);
+  margin: 0 auto;
 }
 
 .our-products .section-heading h2 {
@@ -233,6 +241,8 @@ img {
 .product-card {
   background: #eaecf0;
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .product-image-wrap {
@@ -242,7 +252,6 @@ img {
   overflow: hidden;
 }
 
-/* Ensures that the first image in the product-image-wrap takes up the full width and height of its container */
 .product-image-wrap > img:first-child {
   width: 100%;
   height: 100%;
@@ -301,7 +310,7 @@ img {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   background: transparent;
-  padding: 0.8rem 4rem;
+  padding: 0.8rem 2rem;
   font-weight: 600;
 }
 
@@ -310,52 +319,250 @@ img {
   color: white;
 }
 
-/* Media Queries */
+.rooms-inspiration {
+  background-color: rgb(250, 248, 237);
+  padding: 5rem 0;
+  overflow: hidden; 
+}
+
+.rooms-container {
+  display: flex;
+  align-items: center; 
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding-left: 2rem;
+  gap: 30px;
+}
+
+.rooms-content {
+  width: 400px;
+  padding-left: 1.2rem;
+  flex-shrink: 0;
+}
+
+.rooms-content h2 {
+  font-size: 1.8rem;
+  font-weight: 850;
+  color: rgb(69, 68, 68);
+}
+
+.rooms-content p {
+  color: rgb(90, 88, 88);
+  font-size: .8rem;
+  font-weight: 520;
+  margin-bottom: 2.2rem;
+}
+
+.rooms-content .btn {
+  padding: 1rem 2.2rem;
+  font-weight: 600;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.rooms-slider-wrapper {
+  flex-grow: 1;
+  min-width: 0; 
+  position: relative;
+}
+
+.rooms-slider {
+  display: grid;
+  grid-template-columns: 400px 350px 240px; 
+  gap: 24px;
+  align-items: start; 
+  width: auto;
+  margin-bottom: 40px; 
+}
+
+.slide {
+  position: relative;
+  height: 486px; 
+}
+
+.slide.active-slide {
+  height: 580px; 
+}
+
+.slide img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
+  display: block;
+}
+
+.slide-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.slide-info {
+  background: rgba(255, 255, 255, 0.72);
+  padding: 24px 32px;
+}
+
+.room-number {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #585757;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.room-number .line {
+  width: 27px;
+  height: 1px;
+  background-color: #616161;
+}
+
+.slide-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #313030;
+  margin: 0;
+}
+
+.slide-link {
+  display: flex;
+  background: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  text-decoration: none;
+}
+
+.slider-dots {
+  position: absolute;
+  left: 900px; 
+  top:3500px;
+}
+
+.slider-dots img {
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .range-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rooms-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .rooms-content {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .rooms-slider-wrapper {
+    overflow-x: auto;
+    padding-bottom: 3rem;
+  }
+  
+  .slider-dots {
+    left: 1.5rem;
+    bottom: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  /* Header Mobile Optimization */
   .header .header-flex {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    text-align: center;
   }
   
   .header .main-menu {
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .hero {
+
+.hero {
     height: auto;
-    padding: 4rem 0;
+    padding: 3rem 1rem;
     justify-content: center;
+    text-align: center;
   }
   
   .hero-container {
     justify-content: center;
+    padding: 0;
   }
   
   .hero-content {
     padding: 2.5rem 1.5rem;
-    margin: 0 1rem;
-    text-align: center;
+    margin: 0;
+    width: 100%;
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .range-grid {
     grid-template-columns: 1fr; 
-    gap: 30px;
+    gap: 20px;
   }
   
   .range-item img {
-    height: auto;
+    height: 350px;
   }
+
+  /* Products Grid Mobile */
   .product-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
-}
-@media (max-width: 1024px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  /* Rooms Slider Mobile */
+  .rooms-slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .slide, 
+  .slide.active-slide {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+  }
+
+  .slider-dots {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .slider-dots img {
+    grid-column: auto;
+  }
+
+  .slide.last-slide {
+    display: none;
   }
 }
