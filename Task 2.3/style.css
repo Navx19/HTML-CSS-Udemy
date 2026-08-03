@@ -449,6 +449,78 @@ img {
   height: auto;
   display: block;
 }
+.share-setup {
+  padding: 4rem 1.5rem 5rem;
+  overflow: hidden;
+}
+
+.setup-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.setup-heading p {
+  color: #616161;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.setup-heading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 .5rem;
+  color: var(--dark-color);
+}
+
+.setup-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1780px;
+  margin: 0 auto;
+}
+
+.setup-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.setup-col img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.setup-col.col-1 img:nth-child(1) { 
+  height: 372px; 
+}
+.setup-col.col-1 img:nth-child(2) {
+   height: 350px; 
+  }
+
+.setup-col.col-2 img:nth-child(1) {
+   height: 280px; 
+  }
+.setup-col.col-2 img:nth-child(2) {
+   height: 392px; 
+  }
+
+.setup-col.col-3 img:nth-child(1) {
+   height: 348px; 
+  }
+.setup-col.col-3 img:nth-child(2) {
+   height: 433px; 
+  }
+
+.setup-col.col-4 img:nth-child(1) {
+   height: 382px;
+   }
+.setup-col.col-4 img:nth-child(2) { 
+  height: 220px; 
+}
 
 @media (max-width: 1024px) {
   .range-grid {
@@ -480,10 +552,16 @@ img {
     left: 1.5rem;
     bottom: 0;
   }
+  .setup-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .setup-col {
+    width: 40%;
+  }
 }
 
 @media (max-width: 768px) {
-  /* Header Mobile Optimization */
   .header .header-flex {
     flex-direction: column;
     gap: 1rem;
@@ -527,13 +605,11 @@ img {
     height: 350px;
   }
 
-  /* Products Grid Mobile */
   .product-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  /* Rooms Slider Mobile */
   .rooms-slider {
     display: flex;
     flex-direction: column;
@@ -543,19 +619,8 @@ img {
 
   .slide, 
   .slide.active-slide {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 4 / 5;
-  }
-
-  .slider-dots {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
     width: 100%;
+    height: auto ;
   }
   
   .slider-dots img {
@@ -564,5 +629,23 @@ img {
 
   .slide.last-slide {
     display: none;
+  }
+  .setup-heading h2 {
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+  }
+  
+  .setup-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .setup-col {
+    width: 100%;
+  }
+
+  .setup-col img {
+    height: 200px;
   }
 }
